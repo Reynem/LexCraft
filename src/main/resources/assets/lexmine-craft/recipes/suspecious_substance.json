@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "R"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:purple_dye"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {},
+    "group": "stuff"
+}
