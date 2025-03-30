@@ -1,19 +1,20 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "#",
-        "R"
+        "###",
+        "#A#",
+        "###"
     ],
     "key": {
         "#": {
-            "item": "minecraft:purple_dye"
+            "item": "minecraft:emerald"
         },
-        "R": {
-            "item": "minecraft:redstone"
+        "A": {
+            "item": "minecraft:apple"
         }
     },
     "result": {
-        "item": "lexmine-craft:suspicious_substance",
+        "item": "lexmine-craft:emerald_apple",
         "count": 1
     },
     "group": "stuff"

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lexmine-craft:item/emerald_apple"
+  }
+}

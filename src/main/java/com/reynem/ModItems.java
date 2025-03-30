@@ -12,6 +12,8 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
 
+import static com.reynem.EmeraldApple.EMERALD_FOOD_COMPONENT;
+
 
 public class ModItems {
     public static final Item SUSPICIOUS_SUBSTANCE = register(
@@ -19,6 +21,14 @@ public class ModItems {
             SuspiciousSubstanceItem::new, // передаем сам класс
             new Item.Settings()
     );
+
+    public static final Item EMERALD_APPLE = register(
+            "emerald_apple",
+            EmeraldApple::new,
+            new Item.Settings().food(EMERALD_FOOD_COMPONENT)
+    );
+
+
 
     public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Create the item key.
@@ -35,7 +45,11 @@ public class ModItems {
 
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
-                .register((itemGroup) -> itemGroup.add(ModItems.SUSPICIOUS_SUBSTANCE));
+                .register((itemGroup) -> {
+                    itemGroup.add(ModItems.SUSPICIOUS_SUBSTANCE);
+                    itemGroup.add(ModItems.EMERALD_APPLE);
+                });
+
 
         FuelRegistry.INSTANCE.add(ModItems.SUSPICIOUS_SUBSTANCE, 40 * 20);
     }
